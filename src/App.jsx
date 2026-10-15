@@ -268,7 +268,7 @@ export default function App() {
           </nav>
 
           <a href="#contact" className="px-4 py-2 bg-[#F7BECA] text-[#670007] border-2 border-[#670007] rounded-full font-heading font-bold text-xs md:text-sm hover:bg-[#670007] hover:text-[#F9F6EA] transition-all shadow-retro-sm">
-            HIRE ME ✨
+            HIRE ME!
           </a>
         </div>
       </header>
