@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ExternalLink, 
-  Mail, 
-  Sparkles, 
-  Code2, 
-  Briefcase, 
-  Copy, 
-  Check, 
-  X, 
+import {
+  ExternalLink,
+  Mail,
+  Sparkles,
+  Code2,
+  Briefcase,
+  Copy,
+  Check,
+  X,
   ArrowUpRight,
   GraduationCap,
   Award
 } from 'lucide-react';
-
+import beeIcon from './assets/bee-icon.png';
 import heroImage from './assets/ellie2.jpg';
 import aboutImage from './assets/ellie.jpg';
 import strayPetsImg from './assets/straypets.png';
@@ -29,7 +29,7 @@ const GithubIcon = ({ className = "w-5 h-5" }) => (
 
 const LinkedinIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
   </svg>
 );
 
@@ -183,7 +183,7 @@ const ProjectModal = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
       <div className="relative w-full max-w-2xl bg-[#F9F6EA] rounded-3xl border-4 border-[#670007] p-6 md:p-8 shadow-retro-lg overflow-hidden">
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 bg-[#F7BECA] text-[#670007] rounded-full border-2 border-[#670007] hover:bg-[#670007] hover:text-white transition-colors"
         >
@@ -195,7 +195,7 @@ const ProjectModal = ({ project, onClose }) => {
         </span>
 
         <h3 className="text-3xl font-display text-[#670007] mb-3">{project.title}</h3>
-        
+
         <div className="relative w-full h-56 md:h-64 rounded-2xl overflow-hidden border-3 border-[#670007] mb-4 bg-white flex items-center justify-center">
           <img src={project.imagePlaceholder} alt={project.title} className="w-full h-full object-cover" />
         </div>
@@ -252,8 +252,8 @@ export default function App() {
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'py-2 bg-[#F9F6EA]/90 backdrop-blur-md border-b-2 border-[#670007] shadow-sm' : 'py-4 bg-transparent'}`}>
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <a href="#hero" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-[#670007] text-[#F9F6EA] flex items-center justify-center font-display text-lg group-hover:rotate-12 transition-transform shadow-retro-sm">
-              🐝
+            <div className="w-10 h-10 rounded-full bg-[#670007] p-1.5 flex items-center justify-center group-hover:rotate-12 transition-transform shadow-retro-sm overflow-hidden">
+              <img src={beeIcon} alt="Bee Icon" className="w-full h-full object-contain" />
             </div>
             <span className="font-display text-xl md:text-2xl text-[#670007] tracking-wider">
               ELLYSSA REGODON
@@ -268,7 +268,7 @@ export default function App() {
           </nav>
 
           <a href="#contact" className="px-4 py-2 bg-[#F7BECA] text-[#670007] border-2 border-[#670007] rounded-full font-heading font-bold text-xs md:text-sm hover:bg-[#670007] hover:text-[#F9F6EA] transition-all shadow-retro-sm">
-            HIRE ME! 
+            HIRE ME ✨
           </a>
         </div>
       </header>
@@ -409,9 +409,8 @@ export default function App() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveFilter(tab.id)}
-                  className={`px-4 py-2 rounded-xl font-heading font-bold text-xs md:text-sm border-2 border-white transition-all ${
-                    activeFilter === tab.id ? 'bg-[#F7BECA] text-[#670007] shadow-retro-sm scale-105' : 'bg-black/30 text-white hover:bg-white/20'
-                  }`}
+                  className={`px-4 py-2 rounded-xl font-heading font-bold text-xs md:text-sm border-2 border-white transition-all ${activeFilter === tab.id ? 'bg-[#F7BECA] text-[#670007] shadow-retro-sm scale-105' : 'bg-black/30 text-white hover:bg-white/20'
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -421,7 +420,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (
-              <div 
+              <div
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
                 className={`group cursor-pointer bg-[#F9F6EA] text-[#670007] rounded-3xl border-4 border-white p-5 shadow-retro-lg transition-all duration-300 hover:-translate-y-2 ${project.rotation}`}
