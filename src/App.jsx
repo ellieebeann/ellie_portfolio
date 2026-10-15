@@ -531,7 +531,7 @@ export default function App() {
           </div>
 
           <p className="text-xs font-bold font-heading text-[#670007]/80">
-            © {new Date().getFullYear()} MA. ELLYSSA BIANCA REGODON • BSIT CANDIDATE 🐝
+            © {new Date().getFullYear()} MA. ELLYSSA BIANCA REGODON • BSIT •
           </p>
         </div>
       </footer>
