@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=Lilita+One&family=Lilex:wght@400;600&display=swap');
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F9F6EA;
+  color: #670007;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --burgundy: #670007;
+  --pink-light: #F7BECA;
+  --blue-soft: #D9E7FF;
+  --yellow-soft: #FDE0A5;
+  --cream: #F9F6EA;
+  --gold-accent: #988130;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--burgundy);
+  font-family: 'Lilex', monospace, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Gingham Pattern Background */
+.bg-gingham-pink {
+  background-color: #fce4ec;
+  background-image: 
+    linear-gradient(90deg, rgba(230, 81, 0, 0.08) 50%, transparent 50%),
+    linear-gradient(rgba(230, 81, 0, 0.08) 50%, transparent 50%);
+  background-size: 24px 24px;
+}
+
+.bg-gingham-yellow {
+  background-color: #fef9e7;
+  background-image: 
+    linear-gradient(90deg, rgba(152, 129, 48, 0.1) 50%, transparent 50%),
+    linear-gradient(rgba(152, 129, 48, 0.1) 50%, transparent 50%);
+  background-size: 24px 24px;
+}
+
+.bg-gingham-blue {
+  background-color: #eef4ff;
+  background-image: 
+    linear-gradient(90deg, rgba(100, 3, 11, 0.06) 50%, transparent 50%),
+    linear-gradient(rgba(100, 3, 11, 0.06) 50%, transparent 50%);
+  background-size: 24px 24px;
+}
+
+/* Stamp / Scalloped Border Effect */
+.stamp-border {
+  border: 12px solid #670007;
+  border-image: radial-gradient(#670007 69%, #0000 70%) 12;
+}
+
+/* Font Classes */
+.font-display {
+  font-family: 'Lilita One', cursive;
+}
+
+.font-serif-title {
+  font-family: 'Junge', serif;
+}
+
+/* Infinite Marquee Keyframe */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

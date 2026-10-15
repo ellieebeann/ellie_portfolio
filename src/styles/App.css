@@ -1,0 +1,72 @@
+/* Custom Typography Utility Classes */
+.font-display {
+  font-family: 'Lilita One', cursive, sans-serif;
+}
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Gingham Patterns */
+.bg-gingham-pink {
+  background-color: #F7BECA;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.4) 50%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.4) 50%, transparent 50%);
+  background-size: 32px 32px;
+}
+
+.bg-gingham-blue {
+  background-color: #D9E7FF;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.45) 50%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.45) 50%, transparent 50%);
+  background-size: 30px 30px;
+}
+
+.bg-gingham-yellow {
+  background-color: #FDE0A5;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.4) 50%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.4) 50%, transparent 50%);
+  background-size: 28px 28px;
+}
+
+.bg-gingham-maroon {
+  background-color: #670007;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 50%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.08) 50%, transparent 50%);
+  background-size: 28px 28px;
+}
+
+/* Retro Solid Shadows */
+.shadow-retro {
+  box-shadow: 6px 6px 0px 0px #670007;
+}
+
+.shadow-retro-lg {
+  box-shadow: 10px 10px 0px 0px #670007;
+}
+
+.shadow-retro-sm {
+  box-shadow: 4px 4px 0px 0px #670007;
+}
+
+/* Ticker Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
