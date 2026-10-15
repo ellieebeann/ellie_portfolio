@@ -13,7 +13,6 @@ import {
   Award
 } from 'lucide-react';
 
-// IMPORT ASSET IMAGES DIRECTLY
 import heroImage from './assets/ellie2.jpg';
 import aboutImage from './assets/ellie.jpg';
 import strayPetsImg from './assets/straypets.png';
@@ -22,7 +21,6 @@ import pocketPawsImg from './assets/pocketpaws.png';
 import scribdImg from './assets/scribd.png';
 import flomfyNestImg from './assets/flomfynest.png';
 
-// Custom SVG Brand Icons
 const GithubIcon = ({ className = "w-5 h-5" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -94,7 +92,6 @@ const customStyles = `
   .shadow-retro-sm { box-shadow: 4px 4px 0px 0px #670007; }
 `;
 
-// RESUME PROJECTS DATA WITH LOCAL ASSETS
 const PORTFOLIO_PROJECTS = [
   {
     id: 'proj-1',
@@ -252,7 +249,6 @@ export default function App() {
     <div className="min-h-screen bg-[#F9F6EA] text-[#670007] font-sans overflow-x-hidden">
       <style>{customStyles}</style>
 
-      {/* NAVBAR */}
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'py-2 bg-[#F9F6EA]/90 backdrop-blur-md border-b-2 border-[#670007] shadow-sm' : 'py-4 bg-transparent'}`}>
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <a href="#hero" className="flex items-center gap-2 group">
@@ -277,7 +273,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* HERO SECTION */}
       <section id="hero" className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gingham-pink relative border-b-4 border-[#670007]">
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -394,7 +389,6 @@ export default function App() {
 
       <ScallopDivider fillColor="#670007" height={36} />
 
-      {/* PROJECTS SECTION */}
       <section id="works" className="py-20 bg-gingham-maroon text-[#F9F6EA] relative">
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-4">
@@ -460,7 +454,6 @@ export default function App() {
 
       <ScallopDivider fillColor="#FDE0A5" flip={true} height={36} />
 
-      {/* CERTIFICATIONS & HONORS SECTION */}
       <section id="certs" className="py-20 bg-[#FDE0A5] relative">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center max-w-xl mx-auto mb-12">
@@ -491,12 +484,11 @@ export default function App() {
 
       <ScallopDivider fillColor="#F7BECA" height={40} />
 
-      {/* CONTACT / FOOTER */}
       <footer id="contact" className="bg-[#F7BECA] pt-12 pb-16 relative border-t-4 border-[#670007]">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <div className="bg-[#F9F6EA] rounded-3xl border-4 border-[#670007] p-8 md:p-12 shadow-retro-lg mb-12 relative overflow-hidden">
             <span className="inline-block px-4 py-1.5 bg-[#FDE0A5] border-2 border-[#670007] rounded-full text-xs font-bold text-[#670007] mb-4">
-              OPEN FOR IT INTERNSHIP OPPORTUNITIES 🚀
+              OPEN FOR IT INTERNSHIP OPPORTUNITIES
             </span>
 
             <h2 className="text-4xl sm:text-6xl font-display text-[#670007] mb-4">
