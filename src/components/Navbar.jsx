@@ -1,45 +1,30 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Sparkles, Heart } from 'lucide-react';
+import beeIcon from '../assets/bee-icon.png';
 
-export default function Navbar() {
-  const location = useLocation();
-
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' },
-  ];
-
+export default function Navbar({ scrolled }) {
   return (
-    <nav className="sticky top-0 z-50 bg-[#670007] text-[#F9F6EA] px-6 py-4 shadow-md border-b-4 border-[#988130]">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2 font-display text-2xl tracking-wider hover:text-[#F7BECA] transition">
-          <Sparkles className="w-6 h-6 text-[#FDE0A5]" />
-          <span>STUDENT.PORTFOLIO</span>
-        </Link>
+    <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'py-2 bg-[#F9F6EA]/90 backdrop-blur-md border-b-2 border-[#670007] shadow-sm' : 'py-4 bg-transparent'}`}>
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+        <a href="#hero" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 rounded-full bg-[#670007] p-1.5 flex items-center justify-center group-hover:rotate-12 transition-transform shadow-retro-sm overflow-hidden">
+            <img src={beeIcon} alt="Bee Icon" className="w-full h-full object-contain" />
+          </div>
+          <span className="font-display text-xl md:text-2xl text-[#670007] tracking-wider">
+            ELLYSSA REGODON
+          </span>
+        </a>
 
-        <div className="flex gap-4 md:gap-6 font-semibold text-sm md:text-base">
-          {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`px-3 py-1.5 rounded-full transition-all duration-200 flex items-center gap-1 ${
-                  isActive
-                    ? 'bg-[#F9F6EA] text-[#670007] font-bold shadow-sm'
-                    : 'hover:bg-[#988130] hover:text-white'
-                }`}
-              >
-                {isActive && <Heart className="w-4 h-4 fill-current text-[#670007]" />}
-                {link.name}
-              </Link>
-            );
-          })}
-        </div>
+        <nav className="hidden md:flex items-center gap-6 font-heading font-bold text-sm">
+          <a href="#about" className="hover:text-[#850009] transition-colors">ABOUT</a>
+          <a href="#works" className="hover:text-[#850009] transition-colors">PROJECTS</a>
+          <a href="#certs" className="hover:text-[#850009] transition-colors">CERTS & HONORS</a>
+          <a href="#contact" className="hover:text-[#850009] transition-colors">CONTACT</a>
+        </nav>
+
+        <a href="#contact" className="px-4 py-2 bg-[#F7BECA] text-[#670007] border-2 border-[#670007] rounded-full font-heading font-bold text-xs md:text-sm hover:bg-[#670007] hover:text-[#F9F6EA] transition-all shadow-retro-sm">
+          HIRE ME!
+        </a>
       </div>
-    </nav>
+    </header>
   );
 }

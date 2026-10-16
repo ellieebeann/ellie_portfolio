@@ -1,13 +1,11 @@
 import React from 'react';
 
-export default function TickerMarquee({ text = "LOREM IPSUM 🐝 BANANINI 🐝 PATATA 🐝 BUMBASTIC", bg = "#FFD4DD", color = "#64030B" }) {
+export default function TickerMarquee() {
   return (
-    <div className="w-full py-3 overflow-hidden border-y-2 border-[#670007]" style={{ backgroundColor: bg, color: color }}>
-      <div className="animate-marquee whitespace-nowrap text-2xl font-serif-title tracking-widest uppercase">
-        <span className="mx-4">{text}</span>
-        <span className="mx-4">{text}</span>
-        <span className="mx-4">{text}</span>
-        <span className="mx-4">{text}</span>
+    <div className="bg-[#670007] text-[#F9F6EA] py-3 overflow-hidden border-b-4 border-[#670007] relative z-20">
+      <div className="animate-marquee whitespace-nowrap flex items-center gap-8 font-display text-lg md:text-xl tracking-widest uppercase">
+        <span>REACT.JS ● JAVA ANDROID ● C# UNITY ● SUPABASE ● SQL DATABASE ● TAILWIND CSS ● CISCO NETACAD ●</span>
+        <span>REACT.JS ● JAVA ANDROID ● C# UNITY ● SUPABASE ● SQL DATABASE ● TAILWIND CSS ● CISCO NETACAD ● </span>
       </div>
     </div>
   );
