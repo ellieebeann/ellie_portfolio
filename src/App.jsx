@@ -156,12 +156,12 @@ const PORTFOLIO_PROJECTS = [
 ];
 
 const SKILLS_LIST = [
-  { name: 'React.js & Vite', level: 'Framework'},
-  { name: 'Java (Android)', level: 'Programming' },
-  { name: 'C# (Unity 2D/3D)', level: 'Game Engine' },
-  { name: 'Supabase & MySQL', level: 'Database' },
-  { name: 'Tailwind CSS', level: 'UI Framework' },
-  { name: 'Aseprite & Figma', level: 'Assets & UI' }
+  { name: 'React.js & Vite', level: 'Framework', icon: '⚛️' },
+  { name: 'Java (Android)', level: 'Programming', icon: '📱' },
+  { name: 'C# (Unity 2D/3D)', level: 'Game Engine', icon: '🎮' },
+  { name: 'Supabase & MySQL', level: 'Database', icon: '🗄️' },
+  { name: 'Tailwind CSS', level: 'UI Framework', icon: '🎨' },
+  { name: 'Aseprite & Figma', level: 'Assets & UI', icon: '🖌️' }
 ];
 
 const CERTIFICATIONS = [
