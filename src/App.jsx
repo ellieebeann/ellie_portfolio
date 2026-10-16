@@ -119,7 +119,7 @@ const PORTFOLIO_PROJECTS = [
   },
   {
     id: 'proj-3',
-    title: 'Pocket Paws - 2D/3D Pet Rescue Game',
+    title: 'Pocket Paws - 2D Pet Rescue Game',
     category: 'Game Development',
     type: 'game',
     description: 'A cozy simulation game featuring interactive mini-games focused on animal rescue, caretaking, and rehabilitation mechanics.',
@@ -156,12 +156,12 @@ const PORTFOLIO_PROJECTS = [
 ];
 
 const SKILLS_LIST = [
-  { name: 'React.js & Vite', level: 'Framework', icon: '⚛️' },
-  { name: 'Java (Android)', level: 'Programming', icon: '📱' },
-  { name: 'C# (Unity 2D/3D)', level: 'Game Engine', icon: '🎮' },
-  { name: 'Supabase & MySQL', level: 'Database', icon: '🗄️' },
-  { name: 'Tailwind CSS', level: 'UI Framework', icon: '🎨' },
-  { name: 'Aseprite & Figma', level: 'Assets & UI', icon: '🖌️' }
+  { name: 'React.js & Vite', level: 'Framework'},
+  { name: 'Java (Android)', level: 'Programming' },
+  { name: 'C# (Unity 2D/3D)', level: 'Game Engine' },
+  { name: 'Supabase & MySQL', level: 'Database' },
+  { name: 'Tailwind CSS', level: 'UI Framework' },
+  { name: 'Aseprite & Figma', level: 'Assets & UI' }
 ];
 
 const CERTIFICATIONS = [
